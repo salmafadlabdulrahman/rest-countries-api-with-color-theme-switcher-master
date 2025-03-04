@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "./styles/variables.scss";
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
 
 * {
   padding: 0;
@@ -28,7 +27,13 @@ nav {
 
   padding: 2em;
   background-color: $white;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+nav,
+.search-bar,
+.filter-regions,
+.regions {
+  box-shadow: $box-shadow;
 }
 
 .mode-icon-container {
@@ -38,8 +43,65 @@ nav {
   }
 
   display: flex;
-  gap: .6em;
+  gap: 0.6em;
   cursor: pointer;
 }
 
+/*Search bar - filter*/
+.searching-fields {
+  margin-top: 2em;
+  padding: 2em;
+  justify-content: space-between;
+}
 
+.search-bar {
+  background-color: $white;
+  width: 40%;
+  max-width: 530px;
+  height: 60px;
+  padding: 1.2em;
+  border-radius: 7px;
+
+  svg {
+    stroke: $dark-gray;
+  }
+
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+}
+
+.searching-fields,
+.filter-regions,
+.search-bar {
+  display: flex;
+  gap: 0.5em;
+}
+
+.filter-regions {
+  background-color: $white;
+  width: 200px;
+  height: 55px;
+  justify-content: center;
+  padding-top: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+
+  p {
+    font-weight: $medium-font;
+  }
+}
+
+.regions {
+  background-color: $white;
+  margin-top: 0.5em;
+  border-radius: 7px;
+
+  p {
+    padding: .7em 0 0em 1em;
+    font-weight: $medium-font;
+    cursor: pointer;
+  }
+}
